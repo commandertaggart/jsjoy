@@ -3,6 +3,7 @@
 A NodeJS wrapper for the vJoy Feeder SDK
 
 ## Notes
+* Should work for both x64 and x32 architectures.  I have code detecting which NodeJS architecture you're running and picking the appropriate DLL, but I've only tested x64.
 * Some of the integration testing may be innaccurate.  I'm using NPM library `gamepad` to verify the fed input, but it doesn't seem to like continuous POV hats and there's still something wonky with the linear axis output.  I'll get to that.
 * I did not implement force feedback at all.  Let me know if you want it.
 * `GetvJoyProductString`, `GetvJoyManufacturerString` and `GetvJoySerialNumberString` currently return only the first character in the string because I haven't bothered to figure that aspect of `node-ffi` out yet.  Sorry.
